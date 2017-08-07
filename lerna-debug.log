@@ -1,0 +1,17 @@
+0 silly input [ 'updated' ]
+1 silly flags { _: [ 'updated' ] }
+2 verbose rootPath /development/pge/digital-catalyst/test/lerna-test
+3 info version 2.0.0
+4 silly isInitialized
+5 silly isInitialized true
+6 silly existsSync /development/pge/digital-catalyst/test/lerna-test/VERSION
+7 silly initialize attempt
+8 silly getUpdates
+9 info Checking for updated packages...
+10 silly hasTags
+11 verbose hasTags false
+12 info Comparing with initial commit.
+13 silly collectDependents
+14 silly collectUpdates
+15 info No packages need updating
+16 verbose initialize exited early
