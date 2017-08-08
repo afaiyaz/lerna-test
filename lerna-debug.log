@@ -1,17 +1,248 @@
-0 silly input [ 'updated' ]
-1 silly flags { _: [ 'updated' ] }
+0 silly input [ 'publish' ]
+1 silly flags { _: [ 'publish' ], 'skip-git': true, skipGit: true }
 2 verbose rootPath /development/pge/digital-catalyst/test/lerna-test
 3 info version 2.0.0
 4 silly isInitialized
 5 silly isInitialized true
 6 silly existsSync /development/pge/digital-catalyst/test/lerna-test/VERSION
 7 silly initialize attempt
-8 silly getUpdates
-9 info Checking for updated packages...
-10 silly hasTags
-11 verbose hasTags false
-12 info Comparing with initial commit.
-13 silly collectDependents
-14 silly collectUpdates
-15 info No packages need updating
-16 verbose initialize exited early
+8 info current version undefined
+9 silly getUpdates
+10 info Checking for updated packages...
+11 silly hasTags
+12 verbose hasTags true
+13 silly getLastTag
+14 verbose getLastTag vundefined
+15 info Comparing with vundefined.
+16 silly diffSinceIn vundefined /development/pge/digital-catalyst/test/lerna-test/packages/project1
+17 silly diff packages/project1/npm-debug.log
+17 silly diff packages/project1/package.json
+18 silly diffSinceIn vundefined /development/pge/digital-catalyst/test/lerna-test/packages/project2
+19 silly diff packages/project2/npm-debug.log
+19 silly diff packages/project2/package.json
+20 verbose updated project1
+21 verbose updated project2
+22 silly collectDependents
+23 silly isPackageDependentOf project1 project1
+24 silly isPackageDependentOf project1 project2
+25 silly isPackageDependentOf project2 project1
+26 silly isPackageDependentOf project2 project2
+27 silly collectUpdates
+28 verbose has filtered update project1
+29 verbose has filtered update project2
+30 silly initialize success
+31 silly execute attempt
+32 info publish Publishing packages to npm...
+33 silly existsSync /development/pge/digital-catalyst/test/lerna-test/packages/project1/scripts/prepublish.js
+34 verbose execScript No prepublish script found at /development/pge/digital-catalyst/test/lerna-test/packages/project1/scripts/prepublish.js
+35 silly existsSync /development/pge/digital-catalyst/test/lerna-test/packages/project2/scripts/prepublish.js
+36 verbose execScript No prepublish script found at /development/pge/digital-catalyst/test/lerna-test/packages/project2/scripts/prepublish.js
+37 verbose publishing project1
+38 silly publishTaggedInDir latest project1
+39 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project1' }
+40 verbose publishing project2
+41 silly publishTaggedInDir latest project2
+42 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project2' }
+43 error publish Retrying failed publish: project1
+44 verbose publish error Error: Command failed: npm publish --tag latest
+44 verbose publish error npm ERR! Darwin 16.6.0
+44 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+44 verbose publish error npm ERR! node v8.1.2
+44 verbose publish error npm ERR! npm  v4.1.2
+44 verbose publish error
+44 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+44 verbose publish error npm ERR!
+44 verbose publish error npm ERR! If you need help, you may report this error at:
+44 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+44 verbose publish error
+44 verbose publish error npm ERR! Please include the following file with any support request:
+44 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+44 verbose publish error
+44 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+44 verbose publish error     at <anonymous>
+44 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+45 verbose publishing project1
+46 silly publishTaggedInDir latest project1
+47 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project1' }
+48 error publish Retrying failed publish: project2
+49 verbose publish error Error: Command failed: npm publish --tag latest
+49 verbose publish error npm ERR! Darwin 16.6.0
+49 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+49 verbose publish error npm ERR! node v8.1.2
+49 verbose publish error npm ERR! npm  v4.1.2
+49 verbose publish error
+49 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+49 verbose publish error npm ERR!
+49 verbose publish error npm ERR! If you need help, you may report this error at:
+49 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+49 verbose publish error
+49 verbose publish error npm ERR! Please include the following file with any support request:
+49 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project2/npm-debug.log
+49 verbose publish error
+49 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+49 verbose publish error     at <anonymous>
+49 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+50 verbose publishing project2
+51 silly publishTaggedInDir latest project2
+52 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project2' }
+53 error publish Retrying failed publish: project1
+54 verbose publish error Error: Command failed: npm publish --tag latest
+54 verbose publish error npm ERR! Darwin 16.6.0
+54 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+54 verbose publish error npm ERR! node v8.1.2
+54 verbose publish error npm ERR! npm  v4.1.2
+54 verbose publish error
+54 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+54 verbose publish error npm ERR!
+54 verbose publish error npm ERR! If you need help, you may report this error at:
+54 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+54 verbose publish error
+54 verbose publish error npm ERR! Please include the following file with any support request:
+54 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+54 verbose publish error
+54 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+54 verbose publish error     at <anonymous>
+54 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+55 verbose publishing project1
+56 silly publishTaggedInDir latest project1
+57 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project1' }
+58 error publish Retrying failed publish: project2
+59 verbose publish error Error: Command failed: npm publish --tag latest
+59 verbose publish error npm ERR! Darwin 16.6.0
+59 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+59 verbose publish error npm ERR! node v8.1.2
+59 verbose publish error npm ERR! npm  v4.1.2
+59 verbose publish error
+59 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+59 verbose publish error npm ERR!
+59 verbose publish error npm ERR! If you need help, you may report this error at:
+59 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+59 verbose publish error
+59 verbose publish error npm ERR! Please include the following file with any support request:
+59 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project2/npm-debug.log
+59 verbose publish error
+59 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+59 verbose publish error     at <anonymous>
+59 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+60 verbose publishing project2
+61 silly publishTaggedInDir latest project2
+62 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project2' }
+63 error publish Retrying failed publish: project1
+64 verbose publish error Error: Command failed: npm publish --tag latest
+64 verbose publish error npm ERR! Darwin 16.6.0
+64 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+64 verbose publish error npm ERR! node v8.1.2
+64 verbose publish error npm ERR! npm  v4.1.2
+64 verbose publish error
+64 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+64 verbose publish error npm ERR!
+64 verbose publish error npm ERR! If you need help, you may report this error at:
+64 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+64 verbose publish error
+64 verbose publish error npm ERR! Please include the following file with any support request:
+64 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+64 verbose publish error
+64 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+64 verbose publish error     at <anonymous>
+64 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+65 verbose publishing project1
+66 silly publishTaggedInDir latest project1
+67 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project1' }
+68 error publish Retrying failed publish: project2
+69 verbose publish error Error: Command failed: npm publish --tag latest
+69 verbose publish error npm ERR! Darwin 16.6.0
+69 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+69 verbose publish error npm ERR! node v8.1.2
+69 verbose publish error npm ERR! npm  v4.1.2
+69 verbose publish error
+69 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+69 verbose publish error npm ERR!
+69 verbose publish error npm ERR! If you need help, you may report this error at:
+69 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+69 verbose publish error
+69 verbose publish error npm ERR! Please include the following file with any support request:
+69 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project2/npm-debug.log
+69 verbose publish error
+69 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+69 verbose publish error     at <anonymous>
+69 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+70 verbose publishing project2
+71 silly publishTaggedInDir latest project2
+72 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project2' }
+73 error publish Retrying failed publish: project1
+74 verbose publish error Error: Command failed: npm publish --tag latest
+74 verbose publish error npm ERR! Darwin 16.6.0
+74 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+74 verbose publish error npm ERR! node v8.1.2
+74 verbose publish error npm ERR! npm  v4.1.2
+74 verbose publish error
+74 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+74 verbose publish error npm ERR!
+74 verbose publish error npm ERR! If you need help, you may report this error at:
+74 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+74 verbose publish error
+74 verbose publish error npm ERR! Please include the following file with any support request:
+74 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+74 verbose publish error
+74 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+74 verbose publish error     at <anonymous>
+74 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+75 verbose publishing project1
+76 silly publishTaggedInDir latest project1
+77 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project1' }
+78 error publish Retrying failed publish: project2
+79 verbose publish error Error: Command failed: npm publish --tag latest
+79 verbose publish error npm ERR! Darwin 16.6.0
+79 verbose publish error npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+79 verbose publish error npm ERR! node v8.1.2
+79 verbose publish error npm ERR! npm  v4.1.2
+79 verbose publish error
+79 verbose publish error npm ERR! Invalid version: "null-alpha.7112e02d"
+79 verbose publish error npm ERR!
+79 verbose publish error npm ERR! If you need help, you may report this error at:
+79 verbose publish error npm ERR!     <https://github.com/npm/npm/issues>
+79 verbose publish error
+79 verbose publish error npm ERR! Please include the following file with any support request:
+79 verbose publish error npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project2/npm-debug.log
+79 verbose publish error
+79 verbose publish error     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+79 verbose publish error     at <anonymous>
+79 verbose publish error     at process._tickCallback (internal/process/next_tick.js:169:7)
+80 verbose publishing project2
+81 silly publishTaggedInDir latest project2
+82 silly getExecOpts { cwd: '/development/pge/digital-catalyst/test/lerna-test/packages/project2' }
+83 error publish Ran out of retries while publishing project1 Error: Command failed: npm publish --tag latest
+83 error publish npm ERR! Darwin 16.6.0
+83 error publish npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+83 error publish npm ERR! node v8.1.2
+83 error publish npm ERR! npm  v4.1.2
+83 error publish
+83 error publish npm ERR! Invalid version: "null-alpha.7112e02d"
+83 error publish npm ERR!
+83 error publish npm ERR! If you need help, you may report this error at:
+83 error publish npm ERR!     <https://github.com/npm/npm/issues>
+83 error publish
+83 error publish npm ERR! Please include the following file with any support request:
+83 error publish npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+83 error publish
+83 error publish     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+83 error publish     at <anonymous>
+83 error publish     at process._tickCallback (internal/process/next_tick.js:169:7)
+84 error execute callback with error
+84 error execute  Error: Command failed: npm publish --tag latest
+84 error execute npm ERR! Darwin 16.6.0
+84 error execute npm ERR! argv "/usr/local/Cellar/node/8.1.2/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
+84 error execute npm ERR! node v8.1.2
+84 error execute npm ERR! npm  v4.1.2
+84 error execute
+84 error execute npm ERR! Invalid version: "null-alpha.7112e02d"
+84 error execute npm ERR!
+84 error execute npm ERR! If you need help, you may report this error at:
+84 error execute npm ERR!     <https://github.com/npm/npm/issues>
+84 error execute
+84 error execute npm ERR! Please include the following file with any support request:
+84 error execute npm ERR!     /development/pge/digital-catalyst/test/lerna-test/packages/project1/npm-debug.log
+84 error execute
+84 error execute     at Promise.all.then.arr (/usr/local/Cellar/node/7.5.0/libexec/npm/lib/node_modules/lerna/node_modules/execa/index.js:210:11)
+84 error execute     at <anonymous>
+84 error execute     at process._tickCallback (internal/process/next_tick.js:169:7)
